@@ -3,6 +3,7 @@ import factory from '../ethereum/contracts/factory';
 
 class CampaignIndex extends Component {
     async componentDidMount(){
+  
        const campaigns =  await factory.methods.getDeployedCampaigns().call();
 
        console.log(campaigns);
